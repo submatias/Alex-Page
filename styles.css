@@ -1,523 +1,149 @@
-/* VARIABLES DE COLOR - PALETA TESLEX */
-:root {
-    --primary: #7E57C2;      /* Morado Teslex */
-    --secondary: #5E35B1;    /* Morado Profundo */
-    --dark: #000000;         /* Negro absoluto */
-    --white: #FFFFFF;        /* Blanco puro */
-    --gray: #A6A6A6;         /* Gris técnico */
-    --light-gray: #f4f4f4;
-    --max-width: 1100px;
-}
-
-/* RESET GENERAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--white);
-}
-
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 20px;
-}
-/* --- NUEVOS ESTILOS PARA LA SECCIÓN CÉNTRICA DE QUIÉN SOY --- */
-
-/* Aseguramos que el fondo siga siendo oscuro */
-.story-section {
-    background-color: var(--dark);
-    color: var(--white);
-    padding: 80px 0; /* Un poco más de espacio vertical */
-}
-
-/* El contenedor principal ahora apila los elementos verticalmente y los centra */
-.story-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 40px; /* Espacio entre la imagen y el texto */
-}
-
-/* Estilos específicos para la imagen circular */
-.story-img-centered img {
-    width: 220px;  /* Ancho fijo */
-    height: 220px; /* Alto fijo igual al ancho para que sea cuadrado */
-    border-radius: 50%; /* Esto hace el círculo perfecto */
-    object-fit: cover; /* Asegura que la imagen no se deforme dentro del círculo */
-    /* Borde morado para que resalte (usando tu variable primary) */
-    object-position: 65% center;
-    border: 6px solid var(--primary); 
-    box-shadow: 0 10px 30px rgba(126, 87, 194, 0.3); /* Sombra suave morada */
-}
-
-/* Estilos para el bloque de texto centrado */
-.story-text-centered {
-    max-width: 800px; /* Evita que el texto sea demasiado ancho y difícil de leer */
-    margin: 0 auto;
-}
-
-/* Un texto destacado inicial */
-.highlight-text {
-    font-size: 1.4rem;
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.story-text-centered p {
-    font-size: 1.15rem;
-    margin-bottom: 20px;
-    color: var(--light-gray);
-    line-height: 1.8;
-}
-
-/* Caja de credenciales centrada */
-.bio-box-centered {
-    margin-top: 35px;
-    padding-top: 25px;
-    /* Línea superior morada, pero solo del ancho del texto */
-    border-top: 3px solid var(--primary); 
-    display: inline-block; /* Importante para que el borde se ajuste al contenido */
-}
-
-.bio-box-centered p {
-    color: var(--white);
-    margin-bottom: 0;
-    font-size: 1.1rem;
-}
-/* TIPOGRAFÍA */
-h1, h2, h3 {
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
-    color: var(--white);
-    padding: 80px 0;
-    text-align: center;
-}
-
-.badge {
-    background-color: var(--primary);
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: var(--primary);
-}
-
-.hero .subtitle {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    color: var(--gray);
-}
-
-/* VSL */
-/* CONTENEDOR VSL MEJORADO */
-.vsl-container {
-    max-width: 850px; /* Puedes subirlo a 900px si quieres que se vea más grande */
-    margin: 0 auto 50px;
-    border: 4px solid var(--primary); /* El cuadro morado Teslex */
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: var(--dark);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    line-height: 0; /* Elimina espacio extra debajo del video */
-}
-
-.vsl-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 16 / 9; /* Fuerza el formato 1920x1080 */
-    object-fit: cover;
-}
-
-.vsl-container iframe {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-}
-
-/* BOTONES */
-.cta-button {
-    background-color: var(--primary);
-    color: var(--white);
-    padding: 20px 40px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 10px;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(126, 87, 194, 0.3);
-}
-
-.cta-button:hover {
-    background-color: var(--secondary);
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(126, 87, 194, 0.4);
-}
-
-/* PROBLEM SECTION */
-.problem-section {
-    padding: 100px 0;
-    background-color: var(--light-gray);
-}
-
-.section-intro {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 60px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.pain-points-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.pain-item {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    border-left: 5px solid #ff4d4d; /* Rojo para dolor */
-}
-
-.pain-item i {
-    color: #ff4d4d;
-    font-size: 1.5rem;
-    margin-right: 20px;
-}
-
-/* STORY SECTION */
-.story-section {
-    padding: 100px 0;
-    background-color: var(--dark);
-    color: var(--white);
-}
-
-.story-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.story-text {
-    flex: 1;
-}
-
-.story-text h2 {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: var(--primary);
-}
-
-.story-text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: var(--gray);
-}
-
-.bio-box {
-    margin-top: 30px;
-    padding: 20px;
-    border-top: 1px solid var(--gray);
-}
-
-.story-img img {
-    width: 350px;
-    height: auto;
-    border-radius: 20px;
-    filter: grayscale(20%);
-}
-
-/* BENEFITS SECTION */
-.benefits-section {
-    padding: 100px 0;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.benefit-card {
-    background: var(--white);
-    padding: 25px;
-    border: 1px solid var(--light-gray);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.benefit-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.benefit-card i {
-    color: var(--primary);
-    font-size: 1.2rem;
-    margin-right: 15px;
-}
-
-/* SELECTION SECTION (YES/NO) */
-.selection-section {
-    padding: 80px 0;
-}
-
-.selection-grid {
-    display: flex;
-    gap: 40px;
-}
-
-.selection-box {
-    flex: 1;
-    padding: 40px;
-    border-radius: 15px;
-}
-
-.selection-box.no {
-    background-color: #fff0f0;
-}
-
-.selection-box.yes {
-    background-color: #f0f4ff;
-    border: 2px solid var(--primary);
-}
-
-.selection-box h3 {
-    margin-bottom: 25px;
-}
-
-.selection-box ul {
-    list-style: none;
-}
-
-.selection-box li {
-    margin-bottom: 15px;
-    padding-left: 30px;
-    position: relative;
-}
-
-/* REFINAMIENTO DE LA SECCIÓN DE OFERTA */
-.offer-section {
-    padding: 100px 0;
-    background-color: #f9f9f9;
-}
-
-.offer-card {
-    background: var(--white);
-    border-radius: 24px;
-    display: flex;
-    overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
-    border: 1px solid rgba(126, 87, 192, 0.1);
-}
-
-.offer-list-container {
-    flex: 1.2;
-    padding: 60px;
-}
-
-.offer-list {
-    list-style: none;
-}
-
-.offer-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.offer-list li:last-child {
-    margin-bottom: 0;
-}
-
-.offer-list li i {
-    color: var(--primary);
-    font-size: 1.4rem;
-    margin-right: 20px;
-    margin-top: 5px; /* Alinea el icono con la primera línea de texto */
-    background: rgba(126, 87, 194, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.list-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.list-content strong {
-    font-size: 1.25rem;
-    color: var(--dark);
-    margin-bottom: 4px;
-}
-
-.list-content span {
-    font-size: 1rem;
-    color: #666666; /* Un gris más oscuro que el A6A6A6 para mejor lectura en fondo blanco */
-    line-height: 1.5;
-}
-
-/* ÁREA DE PRECIO (DERECHA) */
-.pricing {
-    flex: 0.8;
-    background-color: var(--dark);
-    color: var(--white);
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.1);
-}
-
-.value-text {
-    text-decoration: line-through;
-    color: var(--gray);
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.price {
-    font-size: 4.5rem;
-    font-weight: 900;
-    color: var(--primary);
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.price::before {
-    content: 'Solo ';
-    font-size: 1rem;
-    display: block;
-    color: var(--white);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.guarantee {
-    font-size: 1.1rem;
-    color: var(--gray);
-    margin-bottom: 40px;
-    font-style: italic;
-}
-
-.cta-button.large {
-    width: 100%;
-    padding: 25px;
-    font-size: 1.5rem;
-}
-
-/* Ajuste para móviles */
-@media (max-width: 900px) {
-    .offer-card {
-        flex-direction: column;
-    }
-    .offer-list-container {
-        padding: 40px 20px;
-    }
-}
-/* FOOTER */
-footer {
-    padding: 50px 0;
-    background-color: var(--dark);
-    color: var(--gray);
-    text-align: center;
-}
-
-.footer-links {
-    margin-top: 20px;
-}
-
-.footer-links a {
-    color: var(--gray);
-    text-decoration: none;
-    margin: 0 15px;
-}
-.footer-logo {
-    margin-bottom: 25px; /* Espacio entre el logo y el texto de copyright */
-}
-
-.footer-logo img {
-    height: 60px; /* Altura ideal para que se vea claro pero no gigante */
-    width: auto;
-    filter: grayscale(0.5); /* Opcional: le da un toque más sobrio al footer */
-    transition: 0.3s;
-}
-
-.footer-logo img:hover {
-    filter: grayscale(0); /* Al pasar el ratón recupera su color original */
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .story-content { flex-direction: column; text-align: center; }
-    .selection-grid { flex-direction: column; }
-    .offer-card { flex-direction: column; }
-    .pricing { padding: 40px 20px; }
-}
-
-/* Bloque de cita en la sección de Alejandro */
-.quote-box {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: var(--secondary);
-    border-radius: 10px;
-    font-style: italic;
-    font-weight: 600;
-}
-
-/* Bloque destacado después de los beneficios */
-.differentiator-box {
-    margin-top: 50px;
-    text-align: center;
-    padding: 30px;
-    background-color: var(--light-gray);
-    border-radius: 15px;
-    border-left: 5px solid var(--primary);
-    font-size: 1.2rem;
-}
-
-.differentiator-box strong {
-    color: var(--secondary);
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema para Aprobar Ingeniería | Alejandro Cascos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>El sistema para aprobar Ingeniería <br><span>sin pagar segundas matrículas</span></h1>
+        <!--   <p class="subtitle">Deja de perder dinero y tiempo. Aprende el método estratégico para dominar tus asignaturas y aprobar con nota.</p>
+        -->     
+            <div class="vsl-container">
+    <video controls poster="IMAGENES/miniatura-video.jpg" class="vsl-video">
+        <source src="IMAGENES/VslCompleto.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
+</div>
+
+            <a href="https://pay.hotmart.com/L103428578F?_gl=1*19u72na*_ga*MTkxNzYxNzc3OC4xNzY2MjQ2NDI3*_ga_GQH2V1F11Q*czE3NjgzMTY1NDckbzExJGcxJHQxNzY4MzE2NjIxJGo0NCRsMCRoMA..&bid=1768316634115" class="cta-button">EMPIEZA HOY - ACCESO INMEDIATO</a>
+        </div>
+    </header>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">¿Te suena esto?</h2>
+            <p class="section-intro">Estudias, te esfuerzas… pero sigues repitiendo asignaturas y perdiendo tu dinero en segundas matrículas.</p>
+            
+            <div class="pain-points-grid">
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Te pasas horas estudiando sin un plan claro.</p></div>
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Revisas apuntes una y otra vez… y sigues sin entenderlos.</p></div>
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Ves a compañeros avanzar mientras tú sigues atascado en lo mismo.</p></div>
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Pagas otra matrícula y piensas: "¿Por qué yo otra vez?".</p></div>
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Has probado métodos "milagro" de estudio y ninguno te ha dado resultados reales.</p></div>
+                <div class="pain-item"><i class="fa-solid fa-circle-xmark"></i><p>Terminas procrastinando con vídeos o TikToks en vez de avanzar de verdad.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-img-centered">
+                    <img src="IMAGENES/ALEJANDRO.jpeg" alt="Alejandro Cascos">
+                </div>
+                
+                <div class="story-text-centered">
+                    <h2 class="section-title">¿Quién te guía en este camino?</h2>
+                    <p class="highlight-text">Yo también he pasado por todo eso.</p>
+                    <p>Soy <strong>Alejandro Cascos</strong>, Ingeniero Eléctrico con Máster en Energías Renovables y creador de <strong>Teslex</strong>, una empresa que desarrolla Sistemas de Electricidad sin Cables y Bobinas Tesla. </p>
+                    
+                    <p>Pero antes de eso, fui un estudiante frustrado. Me enfrenté a las mismas dificultades que tú: confusión, frustración, interminables segundas matrículas, ansiedad por las notas y ganas de abandonar la carrera.</p>
+                    
+                    <p><strong>Suspendí más de 15 asignaturas —sí, 15—</strong> y con un método claro y centrado logré aprobarlas todas y con nota.</p>
+                    
+                    <p>No fue magia. Fue la aplicación de mi método con estrategia y cero excusas. No soy un genio, ni tuve suerte; simplemente descubrí qué métodos realmente funcionan para estudiantes de ingeniería como tú.</p>
+                    
+                    <div class="quote-box">
+                        <p>"Esto cambió mi carrera... y ahora quiero que tu historia cambie también. Porque si yo pude hacerlo, tú también puedes".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">¿Qué vas a lograr con este programa?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card"><i class="fa-solid fa-calendar-check"></i><p>Construir un plan de estudio que funciona según tu ritmo y tus horarios.</p></div>
+                <div class="benefit-card"><i class="fa-solid fa-lightbulb"></i><p>Técnicas para comprender de verdad de qué van las asignaturas.</p></div>
+                <div class="benefit-card"><i class="fa-solid fa-bullseye"></i><p>Estrategias para convertir tus horas de estudio en aprobados.</p></div>
+                <div class="benefit-card"><i class="fa-solid fa-clock"></i><p>Hábitos que te mantienen enfocado sin quemarte.</p></div>
+                <div class="benefit-card"><i class="fa-solid fa-gears"></i><p>Herramientas para eliminar bloqueos mentales y la temida procrastinación.</p></div>
+                <div class="benefit-card"><i class="fa-solid fa-users"></i><p>Una comunidad que entiende por lo que estás pasando y te acompaña en el camino.</p></div>
+            </div>
+            
+            <div class="differentiator-box">
+                <p>Esto no es simplemente "otro curso": es tu <strong>mapa para aprobar sin repetir</strong>, sin gastar más dinero ni tiempo del necesario.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="selection-section">
+        <div class="container">
+            <div class="selection-grid">
+                <div class="selection-box no">
+                    <h3>❌ Esto NO es para ti si...</h3>
+                    <ul>
+                        <li>Buscas resultados sin dedicar el esfuerzo necesario.</li>
+                        <li>Quieres estudiar "a medias" y esperar milagros.</li>
+                        <li>Crees que solo ver videos —sin llevarlos a la práctica— te va a salvar.</li>
+                        <li>Crees que memorizar ejercicios inútilmente te hará aprobar.</li>
+                    </ul>
+                </div>
+                <div class="selection-box yes">
+                    <h3>✅ Esto SÍ es para ti si...</h3>
+                    <ul>
+                        <li>Ya estás cansado de suspender constantemente y repetir.</li>
+                        <li>Quieres pasar de vivir frustrado a estudiar con una estrategia clara.</li>
+                        <li>Quieres organizarte con un plan que realmente funciona.</li>
+                        <li>Te importa aprobar sabiendo lo que haces, no solo tentando a la suerte.</li>
+                        <li>Estás listo para comprometerte con tus metas y objetivos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inscripcion" class="offer-section">
+        <div class="container">
+            <h2 class="section-title">Esto es lo que recibes</h2>
+            <div class="offer-card">
+                <div class="offer-list-container">
+                    <ul class="offer-list">
+                        <li><i class="fa-solid fa-book"></i><div class="list-content"><strong>Curso completo paso a paso</strong><span>Más de 6 módulos con más de 4 horas de formación completa en vídeo.</span></div></li>
+                        <li><i class="fa-solid fa-brain"></i><div class="list-content"><strong>Técnicas de estudio comprobadas</strong><span>Métodos explicados por mí, sin palabrería, para que no te pierdas nada.</span></div></li>
+                        <li><i class="fa-solid fa-calendar-days"></i><div class="list-content"><strong>Planner de estudio</strong><span>Para organizar semanas y exámenes con un enfoque 100% práctico.</span></div></li>
+                        <li><i class="fa-solid fa-video"></i><div class="list-content"><strong>Videos explicativos claros</strong><span>Yendo al grano y eliminando todo el relleno innecesario.</span></div></li>
+                        <li><i class="fa-solid fa-users"></i><div class="list-content"><strong>Comunidad de apoyo</strong><span>Acceso a un grupo de estudiantes con tu misma meta.</span></div></li>
+                        <li><i class="fa-solid fa-chalkboard-user"></i><div class="list-content"><strong>Sesiones guiadas y mentorías</strong><span>Acompañamiento cercano según tu propio ritmo.</span></div></li>
+                    </ul>
+                </div>
+
+                <div class="pricing">
+                    <p class="value-text">Valor total:0 </p>
+                    <p class="price">0€</p>
+                    <p class="guarantee">La matrícula que no vas a volver a pagar.</p>
+                    <a href="https://pay.hotmart.com/L103428578F?_gl=1*19u72na*_ga*MTkxNzYxNzc3OC4xNzY2MjQ2NDI3*_ga_GQH2V1F11Q*czE3NjgzMTY1NDckbzExJGcxJHQxNzY4MzE2NjIxJGo0NCRsMCRoMA..&bid=1768316634115" class="cta-button large">¡EMPIEZA HOY MISMO!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+            <img src="IMAGENES/TESLEX LOGO BLANCO.png" alt="Teslex Logo">
+        </div>
+            <p>&copy; 2024 Alejandro Cascos - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
